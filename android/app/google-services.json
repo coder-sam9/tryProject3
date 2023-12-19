@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "413497460418",
+    "project_id": "tryproject3-sami",
+    "storage_bucket": "tryproject3-sami.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413497460418:android:95c6f2f3b4ae6def3c1d5b",
+        "android_client_info": {
+          "package_name": "com.tryproject3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmhkMfIbLtlDu24UM-oHtUNxm32N_cj5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
