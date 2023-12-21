@@ -2,10 +2,27 @@ import { View, Text, SafeAreaView, Button, PermissionsAndroid } from 'react-nati
 import React, { useEffect } from 'react';
 import BackgroundTimer from 'react-native-background-timer';
 import Geolocation from 'react-native-geolocation-service';
-
+import notifee , { AndroidStyle } from '@notifee/react-native';
 // Main component responsible for handling location tracking and background tasks
 const MapScreen = () => {
-
+let i=0;
+const generateNotifcation=async ()=>{
+  const channelId = await notifee.createChannel(
+  {  id:'default',
+name:"default channel"
+});
+await notifee.displayNotification({
+  title:"timer runnned 3 times",
+  body:"timer has runned 3 times and hence as coded  notification has been generated",
+  android:{
+    channelId,
+    style:{type:AndroidStyle.BIGPICTURE,picture:"https://downloadwap.com/thumbs7/ringtones/covers/pikachu.jpg"},
+    pressAction:{
+      id:"default"
+    },
+  },
+});
+}
   // This function requests permission to access the user's location using PermissionsAndroid
   const getLocationPermission = async () => {
     const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION);
@@ -49,6 +66,11 @@ const MapScreen = () => {
       BackgroundTimer.runBackgroundTimer(() => {
         console.log("Background task is running...");
         showLoc(); // Get the user's location
+        i++;
+        if(i===3){
+          generateNotifcation();
+        }
+
       }, 3000); // Run the task every 3 seconds
     } else {
       console.log("Stopping background task...");

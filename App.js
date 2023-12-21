@@ -21,6 +21,7 @@ import firebase from '@react-native-firebase/app';
 import messaging from '@react-native-firebase/messaging';
 import MapScreen from "./src/app/screens/MapScreen";
 import CustomNotification from "./src/app/components/CustomNotification";
+import ReduxImplementScreen from "./src/app/screens/ReduxImplementScreen";
 
 
 
@@ -44,7 +45,9 @@ export default function App(params) {
     // </NavigationContainer>
     // <LocationFetch/>
     // <MapScreen/>
-    <CustomNotification/>
+    <ReduxImplementScreen/>
+    // <CustomNotification/>
+
     // <NotificationScreen/>
   )
 }

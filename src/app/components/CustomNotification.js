@@ -3,14 +3,14 @@ import React from 'react';
 import notifee, { AndroidStyle } from '@notifee/react-native';
 
 const CustomNotification = () => {
-    
+    // 
     async function onDisplayNotification() {
         // Create a channel (required for Android)
         const channelId = await notifee.createChannel({
           id: 'default',
           name: 'Default Channel',
         });
-    
+    // 
         // Display a notification
         await notifee.displayNotification({
           title: 'Notification Title',
@@ -26,12 +26,24 @@ const CustomNotification = () => {
           },
         });
       }
-    
+    // 
       return (
         <View>
           <Button title="Display Notification" onPress={() => onDisplayNotification()} />
         </View>
       );
 }
-
+// 
 export default CustomNotification
+// import { View, Text } from 'react-native'
+// import React from 'react'
+
+// const CustomNotification = () => {
+//   return (
+//     <View>
+//       <Text>CustomNotification</Text>
+//     </View>
+//   )
+// }
+
+// export default CustomNotification
