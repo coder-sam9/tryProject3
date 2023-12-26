@@ -11,7 +11,7 @@ export default function CartItemsDisplay({navigation}) {
   return (
     <View>
       <Button title='go to add items' onPress={()=>navigation.navigate("CartItemsAdd")}/>
-      <Button title='check cart scren' onPress={()=>{navigation.navigate("CheckCart")}}/>
+      
       <Text style={{color:"black"}}>CartItemsDisplay</Text> 
       {cartItems.length===0?<Text style={{color:"#000"}}>Add Items</Text>:
       

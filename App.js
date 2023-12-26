@@ -52,7 +52,6 @@ export default function App(params) {
     //   <Stack.Navigator>
     //     <Stack.Screen name="CartItemsAdd" component={ReduxImplementScreen}/>
     //     <Stack.Screen name="CartItemsDisplay" component={CartItemsDisplay}/>
-    //     <Stack.Screen name="CheckCart" component={CartItemsCount}/>
     //   </Stack.Navigator>
     // </NavigationContainer>
     // <CartItemsCount/>
