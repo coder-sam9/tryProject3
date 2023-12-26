@@ -22,6 +22,8 @@ import messaging from '@react-native-firebase/messaging';
 import MapScreen from "./src/app/screens/MapScreen";
 import CustomNotification from "./src/app/components/CustomNotification";
 import ReduxImplementScreen from "./src/app/screens/ReduxImplementScreen";
+import CartItemsDisplay from "./src/app/screens/CartItemsDisplay";
+import CartItemsCount from "./src/app/components/CartItemsCount";
 
 
 
@@ -46,6 +48,14 @@ export default function App(params) {
     // <LocationFetch/>
     // <MapScreen/>
     <ReduxImplementScreen/>
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen name="CartItemsAdd" component={ReduxImplementScreen}/>
+    //     <Stack.Screen name="CartItemsDisplay" component={CartItemsDisplay}/>
+    //     <Stack.Screen name="CheckCart" component={CartItemsCount}/>
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    // <CartItemsCount/>
     // <CustomNotification/>
 
     // <NotificationScreen/>
