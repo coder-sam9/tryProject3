@@ -62,7 +62,10 @@ export default function ReduxImplementScreen({navigation}) {
           :<></>}
           {/* <Button title='check cart' onPress={()=>checkCart()}/> */}
             <FlatList data={apiData} keyExtractor={(apiData)=>apiData.id} renderItem={({item})=>(
-          <CartCard item={item}/> 
+              <View>
+                <Text>{`${item.brand}`}</Text>
+                <CartCard item={item}/> 
+              </View>
         
           )}/> 
         </SafeAreaView>
